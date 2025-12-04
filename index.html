@@ -1,11 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="google-site-verification" content="gy7Fa0zaRGq2-iEMEN6dObTYyjaTEQ9As8aZnifclcE" />
-    <title>Welcome</title>
+    <meta name="google-site-verification"
+content="z33HLrWn_jJe__QCwK1JmDoKn2Hnx5bmbu-bt9Xk-v0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #4a148c);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffcc00, #ff6699);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        
+        .message {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .divider {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(to right, #00ccff, #ffcc00);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+        
+        .progress-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 40px auto;
+            text-align: left;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            width: 75%;
+            background: linear-gradient(to right, #00ccff, #ff3366);
+            border-radius: 10px;
+            position: relative;
+            animation: progressAnimation 2s ease-in-out;
+        }
+        
+        .status {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .blinking-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #00ff88;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            color: #ffcc00;
+        }
+        
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            100% { width: 75%; }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.5rem; }
+            .message { font-size: 1.1rem; }
+            .logo { font-size: 2.5rem; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .container { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hi cool !</h1>
-    <p>COMPUTER AND DATA SERVICES  is coming</p>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-rocket"></i>
+        </div>
+        
+        <h1>Welcome!</h1>
+        
+        <div class="subtitle">
+            We're excited to have you here.
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="message">
+            The website is on the way! We're working hard to create an amazing online experience for you. 
+            Our team is currently building something special that will be launched soon.
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>Website Progress</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        
+        <div class="status">
+            <div class="blinking-dot"></div>
+            <span>Website under construction - Coming soon!</span>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#" title="Follow us on Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" title="Follow us on Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="Follow us on Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" title="Subscribe to our newsletter">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        
+        <footer>
+            &copy; 2023 Your Company Name. All rights reserved.
+        </footer>
+    </div>
+    
+    <script>
+        // Simple script for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click effect to social icons
+            const socialIcons = document.querySelectorAll('.social-icons a');
+            socialIcons.forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! This feature will be available soon.');
+                });
+            });
+            
+            // Animate progress bar on scroll into view
+            const progressBar = document.querySelector('.progress-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        progressBar.style.animation = 'progressAnimation 2s ease-in-out';
+                    }
+                });
+            });
+            
+            observer.observe(progressBar);
+        });
+    </script>
 </body>
 </html>
